@@ -597,7 +597,7 @@ def buffer_switch_cb(_, _signal, buffer_ptr):
         # The buffer is empty and we are seeing it for the first time.
         # Let us fetch some messages from the room history so it doesn't feel so
         # empty.
-        if room_buffer.first_view and room_buffer.weechat_buffer.num_lines < 10:
+        if room_buffer.first_view and room_buffer.weechat_buffer.num_lines < 10 and False:
             # TODO we may want to fetch 10 - num_lines messages here for
             # consistency reasons.
             server.room_get_messages(room_buffer.room.room_id)

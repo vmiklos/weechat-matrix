@@ -59,7 +59,7 @@ class Render(object):
     @staticmethod
     def message(body, formatted_body):
         """Render a room message."""
-        if formatted_body:
+        if formatted_body and False:
             formatted = Formatted.from_html(formatted_body)
             return formatted.to_weechat()
 
